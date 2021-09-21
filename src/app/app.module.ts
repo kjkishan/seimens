@@ -8,6 +8,7 @@ import { AppMaterialModule } from './app-material/app-material.module';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { HomeComponent } from './home/home.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
