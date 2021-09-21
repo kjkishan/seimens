@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="cards">
+        <mat-card>
+            <div class="logo_conatiner">
+                <div class="logo_area">Login</div>
+            </div>
+            <form [formGroup]="loginForm" autocomplete="off">
+                
+                <mat-form-field appearance="outline" class="forms">
+                    <mat-label>User ID</mat-label>
+                    <input formControlName="username" matInput placeholder="User ID">
+                    <mat-icon matSuffix>person</mat-icon>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="forms">
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" [type]="isVisible" matInput placeholder="Password">
+                    <mat-icon matSuffix (click)="togglePasswordVisiblity()">{{getPasswordVisiblity()}}</mat-icon>
+                    
+                  </mat-form-field>
+                  <button mat-raised-button (click)="onSubmitForm()" color="primary" [disabled]="loginForm.invalid">Login</button>&nbsp;
+                  <button mat-raised-button color="warn" (click)="clearForm()">Clear</button>
+            </form>
+        </mat-card>
+    </div>
+</div>
+

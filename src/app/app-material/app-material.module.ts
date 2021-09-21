@@ -8,8 +8,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -22,11 +22,20 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatIconModule,
     MatInputModule,
     MatProgressBarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule
 
   ],
   exports:[
-
+    CommonModule,
+    MatCardModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatProgressBarModule,
+    MatSnackBarModule,
+    ReactiveFormsModule,
   ]
 })
 export class AppMaterialModule { }

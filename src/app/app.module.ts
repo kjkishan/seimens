@@ -5,10 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material/app-material.module';
-
+import { UserAuthComponent } from './user-auth/user-auth.component';
+import { HomeComponent } from './home/home.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserAuthComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +21,7 @@ import { AppMaterialModule } from './app-material/app-material.module';
     AppMaterialModule
   ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
